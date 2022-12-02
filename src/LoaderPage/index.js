@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import { Container } from '../GlobalLayout'
 import img from '../Images/stdaniel.png'
 
-const LoaderPage = ({loaderEnded}) => {
+const LoaderPage = ({loaderEnded, x}) => {
 
     const line1 = 'ST DANIEL';
     const line2 = 'HELP US END IN HOLINESS';
@@ -66,7 +66,7 @@ const LoaderPage = ({loaderEnded}) => {
 
             <LoaderPageWrapper click={loaderEnded}>
                 <ImageWrapper>
-                    <Image src={img}></Image>
+                    <Image src={img} onLoad={x}></Image>
                 </ImageWrapper>
             </LoaderPageWrapper>
 
