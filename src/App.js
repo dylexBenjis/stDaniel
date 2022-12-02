@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import './App.css';
 import img from './Images/stdaniel.png'
+import Load from './Load';
 import LoaderPage from './LoaderPage';
 import Pages from './Pages';
 
@@ -25,6 +26,7 @@ console.log(loaderEnded, load)
 
   return (
     <div className="App">
+        {load? null : <Load/>}
         <LoaderPage loaderEnded={loaderEnded} x={x}/>
         <Pages loaderEnded={loaderEnded}/>
     </div>
