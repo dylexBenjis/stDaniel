@@ -98,7 +98,7 @@ const B = styled.div`
 `
 const BodyHead = styled.div`
   font-size:18px ;
-  font-family: Zen Dots, monospace;
+  font-family: monospace;
   font-weight:bolder ;
 `
 
