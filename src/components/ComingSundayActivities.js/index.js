@@ -86,7 +86,7 @@ const SmallHead = styled.div`
 
 const BigHead = styled.div`
   font-size:25px ;
-  font-family: monospace;
+  font-family: Zen Dots, monospace;
   font-weight:bolder ;
 `
 
