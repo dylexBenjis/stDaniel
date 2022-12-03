@@ -41,7 +41,7 @@ const SideBar = ({IsOpen, scrollNav, ChangeOpen}) => {
                                 spyThrottle={500}
                                 onClick={ChangeOpen}>Events</SidebarLink>
 
-                    <SidebarLink to='project' 
+                    {/* <SidebarLink to='project' 
                                 spy={true}
                                 smooth={true}
                                 offset={-100}
@@ -50,7 +50,7 @@ const SideBar = ({IsOpen, scrollNav, ChangeOpen}) => {
                                 isDynamic={true}
                                 ignoreCancelEvents={false}
                                 spyThrottle={500}
-                                onClick={ChangeOpen}>Projects</SidebarLink>
+                                onClick={ChangeOpen}>Projects</SidebarLink> */}
     
                     <SidebarLink to='harvest' 
                                 spy={true}

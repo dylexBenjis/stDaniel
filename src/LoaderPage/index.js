@@ -60,13 +60,12 @@ const LoaderPage = ({loaderEnded, x, load}) => {
     }
 
 
-
   return (
     <LoaderPageCon>
 
             <LoaderPageWrapper click={loaderEnded}>
                 <ImageWrapper>
-                    <Image src={img} onLoad={x}></Image>
+                    <Image src={img}></Image>
                 </ImageWrapper>
             </LoaderPageWrapper>
 

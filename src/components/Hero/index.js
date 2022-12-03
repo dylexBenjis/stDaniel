@@ -5,7 +5,7 @@ import img from '../../Images/stdaniel.png'
 
 const Hero = () => {
   return (
-    <HeroCon>
+    <HeroCon id=' '>
         <Container>
             <Nav2>
                 <ImageWrapper>

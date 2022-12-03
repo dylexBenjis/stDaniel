@@ -9,6 +9,7 @@ import Hero from '../components/Hero'
 import MassInfo from '../components/MassInfo.js'
 import Newfile from '../components/MassInfo.js/newfile.js'
 import NavBar from '../components/NavBar'
+import SideNav from '../components/SideNav/index.js'
 import SideBar from '../components/Side_bar/index.js'
 import BackImg from '../Images/stdaniel2.png'
 
@@ -23,13 +24,14 @@ const Pages = ({loaderEnded}) => {
     <PagesCon loaderEnded={loaderEnded}>
     <NavBar toggle={ChangeOpen} isOpen={open}/> 
     <SideBar IsOpen={open} ChangeOpen={ChangeOpen}/>
+    <SideNav/>
     <Hero/>
     <PageDiv>
       <MassInfo/>
       <Newfile/>  
       <ComingSundayActivities/> 
       <Anouncements/>
-      <ChurchBuilding/>
+      {/* <ChurchBuilding/> */}
       <Harvest/>
       <Footer/>     
     </PageDiv>   

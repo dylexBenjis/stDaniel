@@ -1,33 +1,25 @@
 import { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import './App.css';
-import img from './Images/stdaniel.png'
-import Load from './Load';
 import LoaderPage from './LoaderPage';
 import Pages from './Pages';
 
 function App() {
 
   const [loaderEnded, setLoaderEnded] = useState(false)
-  const [load, setLoad] = useState(false)
   const y = ()=>{
       setLoaderEnded(true)
   }
 
-  const x = () =>{
-    setLoad(true)
+   useEffect(()=>{
 
-  }
-  useEffect(()=>{
-    if(load===true){
-      setTimeout(y,3000);}
-  },[load])
-console.log(loaderEnded, load)
+      setTimeout(y,3000);
+  },[])
+console.log(loaderEnded)
 
   return (
     <div className="App">
-        {load? null : <Load load={load}/>}
-        <LoaderPage loaderEnded={loaderEnded} x={x}/>
+        <LoaderPage loaderEnded={loaderEnded}/>
         <Pages loaderEnded={loaderEnded}/>
     </div>
   );
