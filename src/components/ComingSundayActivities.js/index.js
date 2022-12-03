@@ -86,18 +86,23 @@ const SmallHead = styled.div`
 
 const BigHead = styled.div`
   font-size:25px ;
-  font-family: Zen Dots, monospace;
+  font-family: monospace;
   font-weight:bolder ;
 `
 
+const BodyHead = styled.div`
+  font-size:18px ;
+  font-family: monospace;
+  font-weight:bolder ;
+`
+
+const BodyText = styled.div`
+  font-size:14px ;
+`
 const HeadDate = styled.div`
   font-size:12px ;
   font-family: monospace ;
 `
-
-const BodyHead = styled.div``
-
-const BodyText = styled.div``
 
 const Hr1 = styled.div`
         display:flex ;
