@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import { Container } from '../GlobalLayout'
 import img from '../Images/stdaniel.png'
 
-const LoaderPage = ({loaderEnded, x}) => {
+const LoaderPage = ({loaderEnded, x, load}) => {
 
     const line1 = 'ST DANIEL';
     const line2 = 'HELP US END IN HOLINESS';

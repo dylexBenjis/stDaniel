@@ -26,7 +26,7 @@ console.log(loaderEnded, load)
 
   return (
     <div className="App">
-        {load? null : <Load/>}
+        {load? null : <Load load={load}/>}
         <LoaderPage loaderEnded={loaderEnded} x={x}/>
         <Pages loaderEnded={loaderEnded}/>
     </div>
