@@ -57,6 +57,9 @@ const BigHead = styled.div`
   font-size:32px ;
   font-family: monospace;
   font-weight:bolder ;
+  @media screen and (max-width:350px){
+    font-size: 28px ;
+  }
 `
 const Hr1 = styled.div`
         display:flex ;
