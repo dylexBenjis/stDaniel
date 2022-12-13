@@ -1,34 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Container } from '../../GlobalLayout'
-
-const data = [
-  {
-    id:'1',
-    head:'christmass',
-    body:'ips fjkfjd kfjdjjfd djrhta the boy wds tieys kduuieham uudtlk ahe boy ws not even going to tell the people that he was csoming  to hte event'
-  },
-  {
-    id:'2',
-    head:'christmass',
-    body:'ips fjkfjd kfjdjjfd djrhta the boy wds tieys kduuieham uudtlk ahe boy ws not even going to tell the people that he was csoming  to hte event'
-  },
-  {
-    id:'3',
-    head:'christmass',
-    body:'ips fjkfjd kfjdjjfd djrhta the boy wds tieys kduuieham uudtlk ahe boy ws not even going to tell the people that he was csoming  to hte event'
-  },
-  {
-    id:'4',
-    head:'christmass',
-    body:'ips fjkfjd kfjdjjfd djrhta the boy wds tieys kduuieham uudtlk ahe boy ws not even going to tell the people that he was csoming  to hte event'
-  },
-  {
-    id:'5',
-    head:'christmass',
-    body:'ips fjkfjd kfjdjjfd djrhta the boy wds tieys kduuieham uudtlk ahe boy ws not even going to tell the people that he was csoming  to hte event'
-  },
-]
+import { data } from './data'
 
 const ComingSundayActivities = () => {
   return (
@@ -41,6 +14,7 @@ const ComingSundayActivities = () => {
             <HeadDate>MonthName DayNumber, Year.</HeadDate>
             <Hr1/>
           </A>
+          <div style={{display:'flex',flexDirection:'column',gap:'10px',marginTop:'20px'}}>
           {data.map((q)=>{
           return(
             <B key={q.id}>
@@ -52,6 +26,7 @@ const ComingSundayActivities = () => {
             </B>
           )})
           }
+          </div>
         </SundayWrapper>
       </Container>
     </ComingSundayActivitiesCon>
@@ -63,7 +38,7 @@ export default ComingSundayActivities
 const ComingSundayActivitiesCon = styled.div`
   z-index:1 ;
   height: auto;
-  margin: 20px 0px;
+  margin: 40px 0px;
 `
 const SundayWrapper = styled.div`
   display:flex ;
@@ -78,6 +53,8 @@ const B = styled.div`
   display:flex ;
   flex-direction: column ;
   gap:5px ;
+  justify-content:center ;
+  border-bottom:2px solid rgb(80,80,80) ;
 `
 const SmallHead = styled.div`
   font-size:18px ;
@@ -98,6 +75,7 @@ const BodyHead = styled.div`
 
 const BodyText = styled.div`
   font-size:14px ;
+  margin-bottom:7px ;
 `
 const HeadDate = styled.div`
   font-size:12px ;

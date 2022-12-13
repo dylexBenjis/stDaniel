@@ -14,7 +14,7 @@ const Footer = () => {
                 </ImageWrapper>
                 </A>
                 <Footer2>
-                    <B>
+                    <B1>
                         <Head>                    
                             <TextHead> Location </TextHead>
                             <Hr></Hr>
@@ -25,25 +25,20 @@ const Footer = () => {
                             St Daniel's Catholic Church                            
                             </div>
                             <div>
-                            Isiu Ikorodu                          
+                            Isiu Junction Ikorodu                          
                             </div>
-                            Ikorodu North L.G.A. Lagos, State.
+                            <div>Ikorodu North L.G.A. </div>
+                            Lagos, State.
                         </TextBody>
-                    </B>
+                    </B1>
                     <B>
                         <Head>                    
-                            <TextHead> Location </TextHead>
+                            <TextHead>Find Us </TextHead>
                             <Hr></Hr>
                         </Head>
                         
                         <TextBody>
-                            <div>
-                            St Daniel's Catholic Church                            
-                            </div>
-                            <div>
-                            Isiu Ikorodu                          
-                            </div>
-                            Ikorodu North L.G.A. Lagos, State.
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d990.716584576472!2d3.613384646594376!3d6.663481652351667!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103be712316edac1%3A0x544533f09978b5cf!2sFADEK%20Petrol%20Station!5e0!3m2!1sen!2sus!4v1670259454366!5m2!1sen!2sus" style={{border:'none', width:'120%'}}  height='250' allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
                         </TextBody>
                     </B>
                 </Footer2>
@@ -79,6 +74,9 @@ const Footer2 = styled.div`
     width:100% ;
     gap:25px;
     margin: 5px 0px 25px 0px;
+    @media screen and (min-width:1300px){
+        flex-direction:row ;
+    }
 `
 
 const A = styled.div`
@@ -105,6 +103,15 @@ const B = styled.div`
     display:flex ;
     flex-direction: column ;
     height:auto ;
+    width:100% ;
+    gap: 15px;
+    align-items:center;
+
+`
+const B1 = styled.div`
+    display:flex ;
+    flex-direction: column ;
+    height:100px ;
     width:100% ;
     gap: 15px;
     align-items:center;
@@ -135,7 +142,6 @@ const TextBody = styled.div`
     display:flex ;
     flex-direction:column ;
     font-size:12px ;
-    justify-content:center ;
     align-items:center ;
 
 `

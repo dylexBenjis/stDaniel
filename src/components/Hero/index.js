@@ -28,9 +28,8 @@ const HeroCon = styled.div`
 const Nav2 = styled.div`
     display:flex ;
     flex-direction:row ;
-    height:calc(100vh*0.2);
+    height:calc(100vh*0.25);
     width:100% ;
-
     justify-content:center ;
     align-items:center;
     padding:10px 0px;

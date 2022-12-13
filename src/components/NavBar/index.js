@@ -30,6 +30,9 @@ const NavBar = ({toggle, isOpen}) => {
                     <Logo src={img} scroll={scroll}>
 
                     </Logo>
+                    <Logo1 src={img} scroll={scroll}>
+
+                    </Logo1>
                 </LogoWrapper>
                 <MobileIcon onClick={toggle} >
                     <Burger IsOpen={isOpen}/>
@@ -87,4 +90,21 @@ const Logo = styled.img`
     left: ${({scroll})=>(scroll?'5px':'-90px')} ;
     transition: left 1s ease ;
     object-fit:contain ;
+
+    @media screen and (min-width:1000px){
+    display:none ;
+    }
+`
+const Logo1 = styled.img`
+    display:flex ;
+    height:100px ;
+    width:60px;
+    position:absolute ;
+    opacity: ${({scroll})=>(scroll?'1':'0')} ;
+    transition: opacity 0.5s ease ;
+    object-fit:contain ;
+
+    @media screen and (max-width:1000px){
+    display:none ;
+    }
 `

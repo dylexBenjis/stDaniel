@@ -1,34 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Container } from '../../GlobalLayout'
-
-const data = [
-  {
-    id:'1',
-    head:'christmass',
-    body:'ips fjkfjd kfjdjjfd djrhta the boy wds tieys kduuieham uudtlk ahe boy ws not even going to tell the people that he was csoming  to hte event'
-  },
-  {
-    id:'2',
-    head:'christmass',
-    body:'ips fjkfjd kfjdjjfd djrhta the boy wds tieys kduuieham uudtlk ahe boy ws not even going to tell the people that he was csoming  to hte event'
-  },
-  {
-    id:'3',
-    head:'christmass',
-    body:'ips fjkfjd kfjdjjfd djrhta the boy wds tieys kduuieham uudtlk ahe boy ws not even going to tell the people that he was csoming  to hte event'
-  },
-  {
-    id:'4',
-    head:'christmass',
-    body:'ips fjkfjd kfjdjjfd djrhta the boy wds tieys kduuieham uudtlk ahe boy ws not even going to tell the people that he was csoming  to hte event'
-  },
-  {
-    id:'5',
-    head:'christmass',
-    body:'ips fjkfjd kfjdjjfd djrhta the boy wds tieys kduuieham uudtlk ahe boy ws not even going to tell the people that he was csoming  to hte event'
-  },
-]
+import { data } from './data'
 
 const Anouncements = () => {
   return (
@@ -37,9 +10,10 @@ const Anouncements = () => {
         <AnouncementsWrapper>
         <A>
             <SmallHead>Upcoming</SmallHead>
-            <BigHead>Events</BigHead>
+            <BigHead>Events/Anouncements</BigHead>
             <Hr1/>
           </A>
+          <div style={{display:'flex',flexDirection:'column',gap:'10px',marginTop:'20px'}}>
           {data.map((q)=>{
           return(
             <B key={q.id}>
@@ -51,6 +25,7 @@ const Anouncements = () => {
             </B>
           )})
           }
+          </div>
         </AnouncementsWrapper>
       </Container>
     </AnouncementsCon>
@@ -62,7 +37,7 @@ export default Anouncements
 const AnouncementsCon = styled.div`
   z-index:1 ;
   height: auto;
-  margin:20px 0 ;
+  margin:40px 0 ;
 `
 const AnouncementsWrapper = styled.div`
   display:flex ;
@@ -79,8 +54,8 @@ const SmallHead = styled.div`
 `
 
 const BigHead = styled.div`
-  font-size:25px ;
-  font-family: Zen Dots, monospace;
+  font-size:32px ;
+  font-family: monospace;
   font-weight:bolder ;
 `
 const Hr1 = styled.div`
@@ -94,7 +69,8 @@ const Hr1 = styled.div`
 const B = styled.div`
   display:flex ;
   flex-direction: column ;
-  gap:5px ;
+  gap:5px ;  
+  border-bottom:2px solid rgb(80,80,80) ;
 `
 const BodyHead = styled.div`
   font-size:18px ;
@@ -104,6 +80,7 @@ const BodyHead = styled.div`
 
 const BodyText = styled.div`
   font-size:14px ;
+  margin-bottom: 7px ;
 `
 const HeadDate = styled.div`
   font-size:12px ;

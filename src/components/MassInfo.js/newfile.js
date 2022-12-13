@@ -7,8 +7,8 @@ const data1 =
     {
         title:'Mass Times', 
         info:[
-            {day:'SUNDAY', time:'00:00am', },
-            {day:'wednesday', time:'00:00am',}
+            {day:'SUNDAY', time:'08:30 am', },
+            {day:'Tuesday', time:'05:00 pm',}
         ]
     }
 
@@ -16,8 +16,7 @@ const data2 =
 {
     title:'Confession Times', 
     info:[
-        {day:'sunday', time:'00:00am', },
-        {day:'monday', time:'00:00am', }
+        {day:'Tuesday', time:'04:30 pm', },
     ]
 }
 
@@ -25,8 +24,7 @@ const data3 =
     {
         title:'Adoration Times', 
         info:[
-            {day:'sunday', time:'00:00am', },
-            {day:'monday', time:'00:00am', }
+            {day:'thursday', time:'--:-- am (Parish, Adamo)', },
         ]
     }
 
@@ -180,7 +178,8 @@ const FirstLine = styled.div`
 const SecondLine = styled.div`
     display:flex ;
     flex-direction:row ;
-    height:auto ;
+    height:32px ;
+    font-size:16px ;
     width:100% ; 
     justify-content:space-between ;
     align-items:center;
