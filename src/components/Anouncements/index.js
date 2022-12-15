@@ -54,11 +54,11 @@ const SmallHead = styled.div`
 `
 
 const BigHead = styled.div`
-  font-size:2rem ;
+  font-size:32px ;
   font-family: monospace;
   font-weight:bolder ;
   @media screen and (max-width:375px){
-    font-size: 1.85rem ;
+    font-size: 28px ;
   }
 `
 const Hr1 = styled.div`

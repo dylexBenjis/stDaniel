@@ -121,11 +121,11 @@ const A = styled.div`
 `
 
 const BigHead = styled.div`
-  font-size:2rem ;
+  font-size:32px ;
   font-family:monospace;
   font-weight:bolder ;  
   @media screen and (max-width:375px){
-    font-size: 1.85rem ;
+    font-size: 28px ;
   }
 `
 const Hr1 = styled.div`
@@ -218,7 +218,7 @@ const SecondLine = styled.div`
 
 const Day = styled.ol`
   font-size:16px ;
-  padding:0px 0px 0px 20px ;
+  padding:0px 5px 0px 20px ;
 `
 
 
