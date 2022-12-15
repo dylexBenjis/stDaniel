@@ -77,7 +77,8 @@ const HarvestCon = styled.div`
   z-index:1 ;
   position:relative ;
   height: auto ;
-  margin:40px 0 ;
+  margin:40px 0 80px 0px;
+  background-color:rgba(230,230,230,0.6) ;
   background-image:url(${Img2}) ;
   background-repeat: no-repeat ;
   background-position-x:center ;
@@ -123,7 +124,7 @@ const BigHead = styled.div`
   font-size:32px ;
   font-family:monospace;
   font-weight:bolder ;  
-  @media screen and (max-width:360px){
+  @media screen and (max-width:375px){
     font-size: 28px ;
   }
 `
