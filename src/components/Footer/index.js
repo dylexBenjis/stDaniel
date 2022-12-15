@@ -37,9 +37,9 @@ const Footer = () => {
                             <Hr></Hr>
                         </Head>
                         
-                        <TextBody>
+                        <MapBody>
                         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d990.716584576472!2d3.613384646594376!3d6.663481652351667!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103be712316edac1%3A0x544533f09978b5cf!2sFADEK%20Petrol%20Station!5e0!3m2!1sen!2sus!4v1670259454366!5m2!1sen!2sus" style={{border:'none', width:'100%'}}  height='250' allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
-                        </TextBody>
+                        </MapBody>
                     </B>
                 </Footer2>
                 <TextBodyEnd> Copyright &copy; {(new Date().getFullYear())} St. Daniel Isiu. 
@@ -143,6 +143,17 @@ const TextBody = styled.div`
     flex-direction:column ;
     font-size:12px ;
     align-items:center ;
+
+`
+const MapBody = styled.div`
+    display:flex ;
+    flex-direction:column ;
+    font-size:12px ;
+    align-items:center ;
+    width:100% ;
+    @media screen and (min-width:325px){
+        width:100% ;
+    }
 
 `
 const TextBodyEnd = styled.div`

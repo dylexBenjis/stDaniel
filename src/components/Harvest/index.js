@@ -2,6 +2,9 @@ import React, { useEffect, useState } from 'react'
 import styled from 'styled-components'
 import { Container } from '../../GlobalLayout'
 import { family_data, state_data } from './data'
+import Img from '../../Images/apple.png'
+import Img2 from '../../Images/vine.png'
+import Img3 from '../../Images/fruits.png'
 
 const Harvest = () => {
 
@@ -22,10 +25,14 @@ const Harvest = () => {
 
   return (
     <HarvestCon id='harvest'>
+      <ImageWrapper>
+        <Image src={Img3}></Image>
+      </ImageWrapper>
+
       <Container>
         <HarvestWrapper>
           <A>
-            <BigHead>Harvest</BigHead>
+            <BigHead>Harvest <img src={Img} style={{width:'30px', height:'30px',margin:'0px 0px -5px -5px'}}></img></BigHead>
             <Hr1/>
           </A>
           <FamilyThanksgiving>
@@ -56,7 +63,7 @@ const Harvest = () => {
                         </SecondLine>
             </StateBody>}
           </StateThanksgiving>
-          <div>The 2022 harvest has come to an end.</div>
+          <div style={{zIndex:'1'}}>The 2022 harvest has come to an end.</div>
         </HarvestWrapper>
       </Container>
     </HarvestCon>
@@ -66,24 +73,52 @@ const Harvest = () => {
 export default Harvest
 
 const HarvestCon = styled.div`
+  display:flex ;
   z-index:1 ;
+  position:relative ;
   height: auto ;
   margin:40px 0 ;
-  background-color: #fff ;
+  background-image:url(${Img2}) ;
+  ::before{
+    content:'' ;
+    position:absolute ;
+    top:0 ;
+    left:0 ;
+    bottom:0 ;
+    right:0 ;
+    background-color: rgba(255,255,255,0.6) ;
+  }
 `
+const ImageWrapper = styled.div`
+  display:flex ;
+  position: absolute;
+  top:0 ;
+  left:0 ;
+  right:0 ;
+  bottom:0 ;
+  z-index:-1 ;
+`
+const Image = styled.img`
+  height:100%;
+  width:100%;
+  object-fit:contain ;
+`
+
 const HarvestWrapper = styled.div`
   display:flex ;
   flex-direction: column ;
   gap:10px ;
+  z-index:5 ;
   padding: 40px 0px ;
 `
 const A = styled.div`
   display:flex ;
+  z-index:1 ;
   flex-direction: column ;
 `
 
 const BigHead = styled.div`
-  font-size:25px ;
+  font-size:32px ;
   font-family:monospace;
   font-weight:bolder ;
 `
@@ -101,6 +136,7 @@ const FamilyThanksgiving = styled.div`
   height:auto ;
   width:100% ;
   margin-top:10px ;
+  z-index:1 ;
 `
 
 const StateThanksgiving = styled.div`
@@ -108,6 +144,7 @@ const StateThanksgiving = styled.div`
   flex-direction:column ;
   height:auto ;
   width:100% ;
+  z-index:1 ;
 `
 const Button1 = styled.div`
     display:flex ;
