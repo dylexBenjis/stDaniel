@@ -53,6 +53,7 @@ const PageDiv = styled.div`
   background-repeat: no-repeat ;
   background-size:cover ;
   background-position-x:center ;
+  row-gap: 80px ;
   ::before{
     content:'' ;
     position:absolute ;
