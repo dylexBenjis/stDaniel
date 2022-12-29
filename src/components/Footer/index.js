@@ -5,7 +5,7 @@ import img from '../../Images/stdaniel.png'
 
 const Footer = () => {
   return (
-    <FooterCon>
+    <FooterCon id='about_us'>
         <Container>
             <Footerwrapper>
                 <A>

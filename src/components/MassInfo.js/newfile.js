@@ -1,6 +1,8 @@
 import React, {useState} from 'react'
 import styled from 'styled-components'
 import { Container } from '../../GlobalLayout'
+import Harvest from '../Harvest'
+import {RiArrowDownSLine, RiArrowUpSLine} from 'react-icons/ri'
 
 
 const data1 = 
@@ -28,31 +30,41 @@ const data3 =
         ]
     }
 
+
 const Newfile = () => {
 
     const [infoClick1, setInfoClick1] = useState(false);
     const [infoClick2, setInfoClick2] = useState(false);
     const [infoClick3, setInfoClick3] = useState(false);
+    const [infoClick4, setInfoClick4] = useState(false);
 
     const toggle=(e)=>{
         const id = e.currentTarget.id;
         console.log(id);
         if(id==='1'){
-            setInfoClick1(true);
+            setInfoClick1(!infoClick1);
             setInfoClick2(false);
             setInfoClick3(false);
+            setInfoClick4(false);
         }
         if(id==='2'){
             setInfoClick1(false);
-            setInfoClick2(true);
+            setInfoClick2(!infoClick2);
             setInfoClick3(false);
+            setInfoClick4(false);
         }
         if(id==='3'){
             setInfoClick1(false);
             setInfoClick2(false);
-            setInfoClick3(true);
+            setInfoClick3(!infoClick3);
+            setInfoClick4(false);
         }
-       
+        if(id==='4'){
+            setInfoClick1(false);
+            setInfoClick2(false);
+            setInfoClick3(false);
+            setInfoClick4(!infoClick4);
+        }
     };
 
    console.log(infoClick1)
@@ -62,7 +74,7 @@ const Newfile = () => {
         <B>
                 <InfoTable>
 
-                    <InfoClick id='1' onClick={toggle}><div>{data1.title}</div>{infoClick1?(<div style={{fontSize:'30px'}}>-</div>):(<div style={{fontSize:'20px'}}>+</div>)}</InfoClick>
+                    <InfoClick1  infoClick1={infoClick1} id='1' onClick={toggle}><div>{data1.title}</div>{infoClick1?(<div style={{fontSize:'20px'}}><RiArrowUpSLine/></div>):(<div style={{fontSize:'20px'}}><RiArrowDownSLine/></div>)}</InfoClick1>
                     {infoClick1 && 
                     (<Info>
                         <FirstLine>{data1.title}</FirstLine> <Hr1/><br/>
@@ -73,7 +85,7 @@ const Newfile = () => {
                             </SecondLine>)})}
                     </Info>) }
 
-                    <InfoClick id='2' onClick={toggle}><div>{data2.title}</div>{infoClick2?(<div style={{fontSize:'30px'}}>-</div>):(<div style={{fontSize:'20px'}}>+</div>)}</InfoClick>
+                    <InfoClick  infoClick2={infoClick2} id='2' onClick={toggle}><div>{data2.title}</div>{infoClick2?(<div style={{fontSize:'20px'}}><RiArrowUpSLine/></div>):(<div style={{fontSize:'20px'}}><RiArrowDownSLine/></div>)}</InfoClick>
                     {infoClick2 && 
                     (<Info>
                         <FirstLine>{data2.title} </FirstLine> <Hr1/><br/>
@@ -84,7 +96,7 @@ const Newfile = () => {
                             </SecondLine>)})}
                     </Info>) }
 
-                    <InfoClick1 id='3' onClick={toggle}><div>{data3.title}</div>{infoClick3?(<div style={{fontSize:'30px'}}>-</div>):(<div style={{fontSize:'20px'}}>+</div>)}</InfoClick1>
+                    <InfoClick  infoClick3={infoClick3} id='3' onClick={toggle} ><div>{data3.title}</div>{infoClick3?(<div style={{fontSize:'20px'}}><RiArrowUpSLine/></div>):(<div style={{fontSize:'20px'}}><RiArrowDownSLine/></div>)}</InfoClick>
                     {infoClick3 && 
                     (<Info>
                         <FirstLine>{data3.title}</FirstLine> <Hr1/><br/>
@@ -94,6 +106,9 @@ const Newfile = () => {
                                 <Time>{q.time}</Time>
                             </SecondLine>)})}
                     </Info>) }
+
+                    <InfoClick id='4' onClick={toggle}><div>Harvest</div>{infoClick4?(<div style={{fontSize:'20px'}}><RiArrowUpSLine/></div>):(<div style={{fontSize:'20px'}}><RiArrowDownSLine/></div>)}</InfoClick>
+                    {infoClick4 && <Harvest/> }
 
                 </InfoTable>
                 </B>
@@ -121,6 +136,8 @@ const InfoTable = styled.div`
     height:auto ;
     width:100% ;
     z-index:2 ;
+    border: 2px gray solid ;
+    box-shadow: 10px 20px 40px gray ;
     
 `
 
@@ -128,23 +145,23 @@ const InfoClick = styled.div`
     display:flex ;
     justify-content: space-between ;
     align-items:center ;
-    height:40px ;
+    height:50px ;
     width:100% ;
-    background-color: gray ;
-    font-size:16px ;
+    background-color: rgba(190,190,190) ;
+    font-size:20px ;
     z-index:1 ;
     cursor: pointer;
     padding:0px 10px ;
-    border-bottom: 2px solid rgb(100,100,100) ;
+    border-top: 2px solid rgb(100,100,100) ;
 `
 const InfoClick1 = styled.div`
     display:flex ;
     justify-content: space-between ;
     align-items:center ;
-    height:40px ;
+    height:50px ;
     width:100% ;
-    background-color: gray ;
-    font-size:16px ;
+    background-color:  rgba(190,190,190)  ;
+    font-size:20px ;
     z-index:1 ;
     cursor: pointer;
     padding:0px 10px ;
@@ -161,7 +178,7 @@ const Info = styled.div`
     flex-direction:column ;
     height:auto ;
     width:100% ;
-    background-color: rgba(200,200,200,0.8) ;
+    background-color: rgb(230,230,230) ;
     padding: 10px 5px 20px 10px ;
 `
 const FirstLine = styled.div`
@@ -179,7 +196,7 @@ const SecondLine = styled.div`
     display:flex ;
     flex-direction:row ;
     height:32px ;
-    font-size:16px ;
+    font-size:20px ;
     width:100% ; 
     justify-content:space-between ;
     align-items:center;

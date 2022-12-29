@@ -72,20 +72,20 @@ const Hr1 = styled.div`
 const B = styled.div`
   display:flex ;
   flex-direction: column ;
-  gap:5px ;  
+  gap:10px ;  
   border-bottom:2px solid rgb(80,80,80) ;
 `
 const BodyHead = styled.div`
-  font-size:18px ;
+  font-size:24px ;
   font-family: monospace;
   font-weight:bolder ;
 `
 
 const BodyText = styled.div`
-  font-size:14px ;
-  margin-bottom: 7px ;
+  font-size:20px ;
+  margin-bottom: 10px ;
 `
 const HeadDate = styled.div`
-  font-size:12px ;
+  font-size:16px ;
   font-family: monospace ;
 `

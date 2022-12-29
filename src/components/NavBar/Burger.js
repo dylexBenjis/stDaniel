@@ -25,10 +25,10 @@ const BurgerCon = styled.div`
 `
 const A = styled.div`
         display:flex ;
-        width: 1.2rem ;
+        width: ${({IsOpen}) => (IsOpen ? '1.25rem' : '1.2rem')};
         height: 0.1rem;         
         position:relative ;
-        background-color:  ${({IsOpen,scrollNav,path,backgroundColor}) => (IsOpen ? 'red' : `${(scrollNav? 'var(--text-primary)' : `${(path ? `${backgroundColor ? 'black':'white'}`:'white')}`)}`)};
+        background-color:  ${({IsOpen,scrollNav,path,backgroundColor}) => (IsOpen ? 'white' : `${(scrollNav? 'var(--text-primary)' : `${(path ? `${backgroundColor ? 'black':'white'}`:'white')}`)}`)};
         transition: background-color 0.05s linear,transform 0.2s ease-in-out ;
         
         transform: ${({IsOpen}) => (IsOpen ? 'rotate(-45deg) translate(-40%, 190% )' : '')};
@@ -44,10 +44,10 @@ const B = styled.div`
 `
 const C = styled.div`
         display:flex ;
-        width: 1.2rem ;
+        width: ${({IsOpen}) => (IsOpen ? '1.25rem' : '1.2rem')} ;
         height: 0.1rem;
         position:relative ;
-        background-color:   ${({IsOpen,scrollNav, path, backgroundColor}) => (IsOpen ? 'red' :  `${(scrollNav? 'var(--text-primary)' : `${(path? `${backgroundColor ? 'black':'white'}`:'white')}`)}`)};
+        background-color:   ${({IsOpen,scrollNav, path, backgroundColor}) => (IsOpen ? 'white' :  `${(scrollNav? 'var(--text-primary)' : `${(path? `${backgroundColor ? 'black':'white'}`:'white')}`)}`)};
         transition:background-color 0.05s linear, transform 0.2s ease-in-out ;
-        transform: ${({IsOpen}) => (IsOpen ? 'rotate(45deg) translate(-30%, -155%)' : '')}
+        transform: ${({IsOpen}) => (IsOpen ? 'rotate(45deg) translate(-30%, -150%)' : '')}
 `

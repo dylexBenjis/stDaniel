@@ -6,6 +6,6 @@ export const state_data = [
   ];
  export const family_data = [
     {family:'Mr. & Mrs. Daniel'},
-    {family:'Mr. & Mrs. Daniel'},
+    {family:'Mr. & Mrs. Obinwanney'},
     {family:'Mr. & Mrs. Daniel'},
   ]

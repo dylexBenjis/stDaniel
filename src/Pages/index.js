@@ -32,7 +32,6 @@ const Pages = ({loaderEnded}) => {
       {/* <ComingSundayActivities/>  */}
       <Anouncements/>
       {/* <ChurchBuilding/> */}
-      <Harvest/>
       <Footer/>     
     </PageDiv>   
     </PagesCon>
@@ -61,6 +60,6 @@ const PageDiv = styled.div`
     left:0 ;
     bottom:0 ;
     right:0 ;
-    background-color:rgba(255,255,255,0.6) ;
+    background-color:rgba(250,250,250,0.95) ;
   }
 `

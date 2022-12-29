@@ -19,7 +19,7 @@ const SideBar = ({IsOpen, scrollNav, ChangeOpen}) => {
 
             <SidebarWrapper>
                 <SidebarMenu>
-                    <SidebarLink to='comingSunday' 
+                    {/* <SidebarLink to='comingSunday' 
                                 spy={true}
                                 smooth={true}
                                 offset={-100}
@@ -28,7 +28,7 @@ const SideBar = ({IsOpen, scrollNav, ChangeOpen}) => {
                                 isDynamic={true}
                                 ignoreCancelEvents={false}
                                 spyThrottle={500}
-                                onClick={ChangeOpen}>Next Sunday</SidebarLink>
+                                onClick={ChangeOpen}>Next Sunday</SidebarLink> */}
 
                     <SidebarLink to='events' 
                                 spy={true}
@@ -39,7 +39,17 @@ const SideBar = ({IsOpen, scrollNav, ChangeOpen}) => {
                                 isDynamic={true}
                                 ignoreCancelEvents={false}
                                 spyThrottle={500}
-                                onClick={ChangeOpen}>Events</SidebarLink>
+                                onClick={ChangeOpen}>Anouncements</SidebarLink>
+                    <SidebarLink to='about_us' 
+                                spy={true}
+                                smooth={true}
+                                offset={-100}
+                                hashSpy={true}
+                                delay={200}
+                                isDynamic={true}
+                                ignoreCancelEvents={false}
+                                spyThrottle={500}
+                                onClick={ChangeOpen}>About Us</SidebarLink>                    
 
                     {/* <SidebarLink to='project' 
                                 spy={true}
@@ -52,7 +62,7 @@ const SideBar = ({IsOpen, scrollNav, ChangeOpen}) => {
                                 spyThrottle={500}
                                 onClick={ChangeOpen}>Projects</SidebarLink> */}
     
-                    <SidebarLink to='harvest' 
+                    {/* <SidebarLink to='harvest' 
                                 spy={true}
                                 smooth={true}
                                 offset={-100}
@@ -61,7 +71,7 @@ const SideBar = ({IsOpen, scrollNav, ChangeOpen}) => {
                                 isDynamic={true}
                                 ignoreCancelEvents={false}
                                 spyThrottle={500}
-                                onClick={ChangeOpen}>Harvest</SidebarLink>   
+                                onClick={ChangeOpen}>Harvest</SidebarLink>    */}
         
                 </SidebarMenu>
                 </SidebarWrapper> </Container>
